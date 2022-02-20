@@ -101,7 +101,12 @@ init([]) ->
 %%          {stop, Reason, State}            (aterminate/2 is called)
 %% --------------------------------------------------------------------
 handle_call({divi,A,B},_From,State) ->
-    Reply=A/B,
+    Reply=case B of
+	      0->
+		  {error,[badarith_try_to_divide_zero]};
+	      _->
+		  A/B
+	  end,
     {reply, Reply, State};
 
 handle_call({ping},_From,State) ->

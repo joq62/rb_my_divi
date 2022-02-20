@@ -31,6 +31,7 @@ t1_test()->
     ok.
 
 t2_test()->
+    ?assert({error,[badarith_try_to_divide_zero]}=:=mydivi:divi(420,0)),
     ok.
 
 t3_test()->
