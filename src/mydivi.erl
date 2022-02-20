@@ -106,7 +106,7 @@ handle_call({divi,A,B},_From,State) ->
 		  {error,[badarith_try_to_divide_zero]};
 	      _->
 		  A/B
-	  end,
+	  end, 
     {reply, Reply, State};
 
 handle_call({ping},_From,State) ->
