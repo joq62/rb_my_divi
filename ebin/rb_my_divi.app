@@ -1,0 +1,10 @@
+{application,rb_my_divi,
+             [{description,"mydivi based on rebar3"},
+              {vsn,"0.2.0"},
+              {registered,[]},
+              {mod,{rb_my_divi_app,[]}},
+              {applications,[kernel,stdlib]},
+              {env,[]},
+              {modules,[mydivi,rb_my_divi_app,rb_my_divi_sup]},
+              {licenses,["Apache 2.0"]},
+              {links,[]}]}.
