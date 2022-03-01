@@ -37,4 +37,7 @@ t2_test()->
 t3_test()->
  ?assert(42.0=:=mydivi:divi(420,10)),
     ok.
+t4_test()->
+    ?assert([nonode@nohost]=:=sd:get(stdlib)),
+    ok.
 
