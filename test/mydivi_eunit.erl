@@ -38,6 +38,9 @@ t3_test()->
  ?assert(42.0=:=mydivi:divi(420,10)),
     ok.
 t4_test()->
-    ?assert([nonode@nohost]=:=sd:get(stdlib)),
+    ?assert([test@c100]=:=sd:get(stdlib)),
     ok.
+
+stop_test()->
+    init:stop().
 
